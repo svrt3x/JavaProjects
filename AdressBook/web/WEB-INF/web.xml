@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <servlet>
+        <servlet-name>StartMyPortfolioServlet</servlet-name>
+        <servlet-class>scjd.jd.myportfolio.StartMyPortfolioServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StartMyPortfolioServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>StartAddressBookServlet</servlet-name>
+        <servlet-class>scjd.jd.myportfolio.myservlets.addressbook.StartAddressBookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StartAddressBookServlet</servlet-name>
+        <url-pattern>/myPortfolio/myServlets/AddressBook</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ContactServlet</servlet-name>
+        <servlet-class>scjd.jd.myportfolio.myservlets.addressbook.servlets.ContactServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContactServlet</servlet-name>
+        <url-pattern>/myPortfolio/myServlets/AddressBook/Contact</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddContactServlet</servlet-name>
+        <servlet-class>scjd.jd.myportfolio.myservlets.addressbook.servlets.AddContactServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddContactServlet</servlet-name>
+        <url-pattern>/myPortfolio/myServlets/AddressBook/addContact</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>scjd.jd.myportfolio.myservlets.addressbook.servlets.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/myPortfolio/myServlets/AddressBook/authorization</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>scjd.jd.myportfolio.myservlets.addressbook.servlets.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/myPortfolio/myServlets/AddressBook/register</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>KillSessionServlet</servlet-name>
+        <servlet-class>scjd.jd.myportfolio.myservlets.addressbook.servlets.KillSessionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>KillSessionServlet</servlet-name>
+        <url-pattern>/myPortfolio/myServlets/AddressBook/killsession</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>

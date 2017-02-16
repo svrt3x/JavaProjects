@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="myportfolio">
+  <path id="library">
+    <pathelement location="C:\apache-tomcat-9.0.0.M3\lib\servlet-api.jar"></pathelement>
+  </path>
+
+  <target name="compile" depends="init">
+    <javac srcdir="src\scjd\jd\myportfolio\myservlets\addressbook\objects" destdir="web\WEB-INF\classes">
+      <classpath refid="library"></classpath>
+    </javac>
+    <javac srcdir="src\scjd\jd\myportfolio\myservlets\addressbook\servlets" destdir="web\WEB-INF\classes">
+      <classpath refid="library"></classpath>
+    </javac>
+    <javac srcdir="src\scjd\jd\myportfolio" destdir="web\WEB-INF\classes">
+      <classpath refid="library"></classpath>
+    </javac>
+  </target>
+
+  <target name="copy" depends="compile">
+    <copy todir="C:\apache-tomcat-9.0.0.M3\webapps\ROOT">
+      <fileset dir="web"></fileset>
+    </copy>
+  </target>
+
+  <target name="start Tomcat" depends="copy">
+    <exec executable="C:\apache-tomcat-9.0.0.M3\bin\startup.bat"></exec>
+  </target>
+
+  <target name="stop Tomcat">
+    <exec executable="C:\apache-tomcat-9.0.0.M3\bin\shutdown.bat"></exec>
+  </target>
+
+  <target name="clear" depends="stop Tomcat">
+    <delete dir="web\WEB-INF\classes"></delete>
+  </target>
+
+  <target name="init" depends="clear">
+    <mkdir dir="web\WEB-INF\classes"></mkdir>
+  </target>
+
+  
+  
+
+</project>
